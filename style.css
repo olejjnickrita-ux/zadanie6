@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4efe8;
+  color: #2b211a;
+}
+
+.app {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.card {
+  background: #fffaf4;
+  border: 1px solid #d9c8b8;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(70, 45, 25, 0.12);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.label {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: #9b5a2e;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 46px);
+}
+
+.instruction {
+  margin: 0 0 28px;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #5d4b3d;
+}
+
+.progress {
+  min-width: 180px;
+}
+
+#progressText {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.progressLine {
+  height: 12px;
+  background: #eadbca;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progressBar {
+  width: 0;
+  height: 100%;
+  background: #d87b3d;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.taskBox {
+  min-height: 180px;
+  padding: 28px;
+  background: #ffffff;
+  border: 2px solid #dac3ad;
+  border-radius: 20px;
+}
+
+.phraseMode {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+.sentenceMode {
+  display: block;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.9;
+}
+
+.wordBtn {
+  border: 2px solid #d6bda5;
+  border-radius: 14px;
+  padding: 8px 12px;
+  background: #fff8ef;
+  color: #2b211a;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.phraseMode .wordBtn {
+  padding: 16px 22px;
+  font-size: clamp(24px, 4vw, 36px);
+}
+
+.sentenceMode .wordBtn {
+  margin: 3px 2px;
+}
+
+.wordBtn:hover {
+  background: #f7e6d4;
+}
+
+.wordBtn.correct {
+  background: #e3f5e7;
+  border-color: #4f9a62;
+  color: #226237;
+}
+
+.wordBtn.wrong {
+  background: #fde5e1;
+  border-color: #cf4e45;
+  color: #8b231f;
+}
+
+.nextBtn {
+  display: block;
+  margin: 28px 0 0 auto;
+  border: none;
+  border-radius: 16px;
+  padding: 15px 28px;
+  background: #d87b3d;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.nextBtn:hover {
+  background: #b9632f;
+}
+
+.finish {
+  margin-top: 24px;
+  padding: 32px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid #dac3ad;
+  border-radius: 20px;
+}
+
+.finish h2 {
+  margin: 0 0 12px;
+  font-size: 32px;
+}
+
+.finish p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #progressText {
+    text-align: left;
+  }
+
+  .taskBox {
+    padding: 18px;
+  }
+
+  .phraseMode .wordBtn {
+    width: 100%;
+  }
+
+  .nextBtn {
+    width: 100%;
+  }
+}

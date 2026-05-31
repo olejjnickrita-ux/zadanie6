@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Тренажёр: убери лишнее слово</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="top">
+        <div>
+          <p class="label">Тренажёр</p>
+          <h1>Убери лишнее слово</h1>
+        </div>
+
+        <div class="progress">
+          <span id="progressText">1 / 1</span>
+          <div class="progressLine">
+            <div id="progressBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="instruction">
+        Нажми на лишнее по смыслу слово. Правильный ответ выделится зелёным.
+      </p>
+
+      <div id="taskBox" class="taskBox"></div>
+
+      <button id="nextBtn" class="nextBtn hidden" type="button">Далее</button>
+
+      <div id="finishScreen" class="finish hidden">
+        <h2>Тренажёр завершён</h2>
+        <p>Все задания выполнены.</p>
+        <button id="restartBtn" class="nextBtn" type="button">Начать заново</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
